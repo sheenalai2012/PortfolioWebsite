@@ -1,0 +1,140 @@
+@font-face {
+    font-family: LemonMilk;
+    src: url(LEMONMILK-RegularItalic.ttf);
+    font-weight: regular;
+  }
+@font-face {
+    font-family: Louis;
+    src: url(Louis\ George\ Cafe.ttf);
+    font-weight: regular;
+}
+html {
+    font-family: LemonMilk;
+    color: rgb(230, 223, 207);
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-bottom: 40px;
+}
+
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom:0;
+    z-index: -1;
+    
+}
+h1 {
+    color: rgba(230, 223, 207, 0.9);
+    font-family: LemonMilk;
+    font-weight: regular;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+}
+
+.nav {
+    flex: 1;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+.words {
+    flex: 2;
+    bottom: 0;
+    overflow: scroll;
+}
+
+.title {
+    display: inline-block;
+    margin: 1.5rem 0; 
+}
+
+
+a {
+    text-decoration: none;
+     color: rgba(230, 223, 207,0.9);
+     font-size: 1.25rem;
+}
+
+.nav {
+    margin: 0;
+    text-align: center;
+    
+}
+
+.link-container {
+    top: 50%;
+  transform: translateY(-50%);
+    display: inline-block;
+    position: fixed;
+
+}
+
+.link-container li {
+    display: inline-block;
+}
+
+.paragraph {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 3vw;
+    width: 40vw;
+    border-radius: 1vw;
+    font-size: 1.2rem;
+    font-family: Louis;
+}
+
+p, li {
+    line-height: 1.5;
+    color: rgba(230, 223, 207, 0.7);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+   align-items: center; 
+   justify-content: center;
+    min-height: 100vh;
+
+}
+
+h2 {
+    font-family: LemonMilk;
+}
+
+h4 {
+    font-size: 1rem;
+    color: rgb(236, 203, 107, 0.8);
+}
+
+.button{
+    color: rgba(230, 223, 207, 0.9);
+    border: 3px solid rgba(230, 223, 207, 0.9);
+    border-radius: 3px;
+    padding: 10px;
+    background-color: transparent;
+    font-family: LemonMilk;
+}
+a:hover {
+    color: rgb(236, 203, 107, 0.8);
+
+}
+
+.button:hover {
+    border: 3px solid rgb(236, 203, 107, 0.8);
+   
+}
+
+.fa {
+    padding: 10px;
+    font-size: 1.5rem!important;
+  }
