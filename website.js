@@ -212,6 +212,7 @@ const moveLetters = () => {
 
 addEventListener('resize', (event) => {setupCanvas();});
 
+
 $(document).ready(() => {
     
     moveLetters();

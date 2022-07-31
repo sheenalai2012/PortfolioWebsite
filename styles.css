@@ -42,6 +42,8 @@ h1 {
 
 .nav {
     flex: 1;
+    margin: 0;
+    text-align: center; 
 }
 
 ul {
@@ -49,7 +51,7 @@ ul {
 }
 
 .words {
-    flex: 2;
+    flex: 3;
     bottom: 0;
     overflow: scroll;
 }
@@ -64,12 +66,6 @@ a {
     text-decoration: none;
      color: rgba(230, 223, 207,0.9);
      font-size: 1.25rem;
-}
-
-.nav {
-    margin: 0;
-    text-align: center;
-    
 }
 
 .link-container {
@@ -93,7 +89,7 @@ a {
     font-family: Louis;
 }
 
-p, li {
+p, li, .menu-item {
     line-height: 1.5;
     color: rgba(230, 223, 207, 0.7);
 }
@@ -101,8 +97,8 @@ p, li {
 .section {
     display: flex;
     flex-direction: column;
-   align-items: center; 
-   justify-content: center;
+    align-items: center; 
+    justify-content: center;
     min-height: 100vh;
 
 }
@@ -115,26 +111,115 @@ h4 {
     font-size: 1rem;
     color: rgb(236, 203, 107, 0.8);
 }
-
-.button{
+.resume-button {
+    display: inline-block;
     color: rgba(230, 223, 207, 0.9);
-    border: 3px solid rgba(230, 223, 207, 0.9);
-    border-radius: 3px;
-    padding: 10px;
-    background-color: transparent;
-    font-family: LemonMilk;
+    background-color: rgba(0236, 203, 107, 0.2);
+    border-radius: 999em;
+    padding: 10px 20px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
+.resume-button:hover {  
+    background-color: rgba(0236, 203, 107, 0.6);
+    color: rgba(0236, 203, 107);
+    cursor: pointer;
+}
+
 a:hover {
     color: rgb(236, 203, 107, 0.8);
 
 }
 
-.button:hover {
-    border: 3px solid rgb(236, 203, 107, 0.8);
-   
-}
-
 .fa {
     padding: 10px;
     font-size: 1.5rem!important;
-  }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        margin: 0;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .link-container {
+        top: 0%;
+        transform: none;
+        position: fixed;
+        width: 100vw;
+        padding: 10px;
+        display: grid;
+        grid-template-areas: 
+        "icons icons icons"
+        "about experience project";
+        grid-gap: 10px;
+        z-index: 1;
+    }
+    .icons {
+        grid-area: icons;
+    }
+    .about {
+        grid-area: about;
+    }
+    .experience {
+        grid-area: experience;
+    }
+    .project {
+        grid-area: project;
+    }
+    .resume {
+        bottom: 2vw;
+        right: 2vw;
+        position: fixed;
+
+    }
+    
+    .link-container br {
+        display: none;
+    }
+    .menu-item a {
+        font-size: 1rem;
+    }
+    .menu-button{
+        display: inline-block;
+        color: rgba(230, 223, 207, 0.9);
+        background-color: rgba(0236, 203, 107, 0.2);
+        border-radius: 999em;
+        padding: 10px 20px;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    .resume-button {
+        background-color: rgba(0236, 203, 107, 0.5);
+        color: rgba(0236, 203, 107, 0.9);
+    }
+
+    .menu-button:hover {  
+        background-color: rgba(0236, 203, 107, 0.6);
+        color: rgba(0236, 203, 107);
+        cursor: pointer;
+    }
+
+    .words {
+        margin: 5vw;
+    }
+    .paragraph {
+        width: 80vw;
+        padding: 5vw;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    a, .paragraph, .menu-button {
+        font-size: 0.9rem;
+    }
+
+    h4 {
+        font-size: 0.7rem;
+    }
+}
+
